@@ -1,2 +1,1 @@
-This is my junior year AP CSA final project that I finally found my code for. It was pretty difficult, because I deleted Eclipse after junior year (I solely use VSCode now, but Eclipse was required at the time), and the Google Doc that my partner (Aman) and I shared code on got nerfed along with our high school accounts, post graduation. Anyway
-The color schemes need work, and I don't think I'll get around to doing any kind of block animation. Nevertheless, I do appreciate good aesthetics, so I might revisit this in the future to fix the color scheme and maybe add some options. 
+This is my senior year AP CSA final project that I finally found my code for. 
