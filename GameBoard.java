@@ -163,7 +163,15 @@ public class GameBoard extends JPanel {
         g.setColor(Color.BLACK);
         g.drawRect(y * 80, x * 80, 80, 80);
         if (value != 0) {
-            g.drawString(String.valueOf(value), y * 80 + 35, x * 80 + 45);
+            Font myFont = new Font("Courier Bold", Font.BOLD, 30);
+            g.setFont(myFont);
+            String valueStr = String.valueOf(value);
+    
+            FontMetrics metrics = g.getFontMetrics(myFont);
+            int textX = y * 80 + (80 - metrics.stringWidth(valueStr)) / 2;
+            int textY = x * 80 + (80 - metrics.getHeight()) / 2 + metrics.getAscent();
+    
+            g.drawString(valueStr, textX, textY);
         }
     }
 
