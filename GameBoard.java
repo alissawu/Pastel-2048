@@ -174,15 +174,6 @@ public class GameBoard extends JPanel {
             g.drawString(valueStr, textX, textY);
         }
     }
-
-    private Color getTileColor(int value, Color[] colorScheme) {
-        int index = (int)(Math.log(value) / Math.log(2)) - 1;
-        if (index >= 0 && index < colorScheme.length) {
-            return colorScheme[index];
-        } else {
-            return Color.GRAY;
-        }
-    }
     
     
     

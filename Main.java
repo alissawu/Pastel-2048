@@ -28,8 +28,5 @@ public class Main {
         gameFrame.add(gameBoard, BorderLayout.CENTER);
         gameFrame.setResizable(false);
         gameFrame.setVisible(true);
-        gameFrame.getContentPane().setBackground(Color.WHITE);
-
-        gameBoard.requestFocusInWindow(); // Request focus when window is first shown
     }
 }
