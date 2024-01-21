@@ -1,32 +1,33 @@
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
-import java.awt.Color;
 
 public class Main {
     public static void main(String[] args) {
-        JFrame gameFrame = new JFrame();
-        GameBoard gameBoard = new GameBoard();
+        JFrame frame = new JFrame();
+        GameBoard board = new GameBoard();
 
-        JComboBox<String> colorSchemeDropdown = new JComboBox<>(new String[]{"Purple", "Pink", "BluePurple"});
-        colorSchemeDropdown.addActionListener(e -> {
-            if (colorSchemeDropdown.getSelectedItem().equals("Purple")) {
-                gameBoard.setColorScheme(ColorSchemes.PURPLE_SCHEME);
-            } else if (colorSchemeDropdown.getSelectedItem().equals("Pink")) {
-                gameBoard.setColorScheme(ColorSchemes.PINK_SCHEME);
-            } else if (colorSchemeDropdown.getSelectedItem().equals("BluePurple")) {
-                gameBoard.setColorScheme(ColorSchemes.BLUE_PURPLE_SCHEME);
+        JComboBox<String> colorDropdown = new JComboBox<>(new String[]{"Purple", "Pink", "BluePurple", "BlueGreen"});
+        colorDropdown.addActionListener(e -> {
+            if (colorDropdown.getSelectedItem().equals("Purple")) {
+                board.setColorScheme(ColorSchemes.PURPLE_SCHEME);
+            } else if (colorDropdown.getSelectedItem().equals("Pink")) {
+                board.setColorScheme(ColorSchemes.PINK_SCHEME);
+            } else if (colorDropdown.getSelectedItem().equals("BluePurple")) {
+                board.setColorScheme(ColorSchemes.BLUE_PURPLE_SCHEME);
+            } else if (colorDropdown.getSelectedItem().equals("BlueGreen")) {
+                board.setColorScheme(ColorSchemes.BLUE_GREEN_SCHEME);
             }
-            gameBoard.requestFocusInWindow(); // Request focus back to the game board, from the combo box
+            board.requestFocusInWindow(); // Request focus back to the game board, from the combo box
         });
 
-        gameFrame.setTitle("2048 Game");
-        gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gameFrame.setSize(340, 400);
-        gameFrame.setLayout(new BorderLayout());
-        gameFrame.add(colorSchemeDropdown, BorderLayout.NORTH);
-        gameFrame.add(gameBoard, BorderLayout.CENTER);
-        gameFrame.setResizable(false);
-        gameFrame.setVisible(true);
+        frame.setTitle("2048 Game");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(340, 400);
+        frame.setLayout(new BorderLayout());
+        frame.add(colorDropdown, BorderLayout.NORTH);
+        frame.add(board, BorderLayout.CENTER);
+        frame.setResizable(false);
+        frame.setVisible(true);
     }
 }

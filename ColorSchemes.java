@@ -1,3 +1,4 @@
+// https://colordesigner.io/gradient-generator
 import java.awt.Color;
 
 public class ColorSchemes {
@@ -61,4 +62,26 @@ public class ColorSchemes {
         new Color(91, 28, 71),
         new Color(84, 8, 54)
     };
+    // BLUE GREEN
+    public static final Color[] BLUE_GREEN_SCHEME = {
+        new Color(220, 214, 255),
+        new Color(213, 214, 255),
+        new Color(204, 215, 255),
+        new Color(196, 216, 255),
+        new Color(186, 216, 255),
+        new Color(176, 217, 255),
+        new Color(166, 218, 255),
+        new Color(155, 219, 255),
+        new Color(144, 220, 255),
+        new Color(133, 220, 255),
+        new Color(123, 221, 253),
+        new Color(113, 221, 249),
+        new Color(104, 222, 243),
+        new Color(97, 222, 237),
+        new Color(92, 222, 230),
+        new Color(90, 221, 222),
+        new Color(90, 221, 213)
+    };
+    
+    
 }
